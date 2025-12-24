@@ -1,0 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#image{
+    display: inline-block;
+    justify-content: flex-end;
+}
+p{
+    display: flex;
+}
