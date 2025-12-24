@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Netflix Clone – HTML & CSS Only</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="nav">
+    <div class="nav__left">
+      <div class="logo">
+        <!-- Simple N logo built with CSS -->
+        <span class="logo__bar logo__bar--left"></span>
+        <span class="logo__bar logo__bar--diag"></span>
+        <span class="logo__bar logo__bar--right"></span>
+        <span class="logo__text">NETFLIX</span>
+      </div>
+      <nav class="menu">
+        <a href="#" class="active">Home</a>
+        <a href="#">TV Shows</a>
+        <a href="#">Movies</a>
+        <a href="#">New & Popular</a>
+        <a href="#">My List</a>
+      </nav>
+    </div>
+
+    <div class="nav__right">
+      <form class="search" role="search" aria-label="Search">
+        <input type="text" placeholder="Search" aria-label="Search content"/>
+        <!-- Magnifier icon (inline SVG so no JS or icon packs needed) -->
+        <button type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path d="M10 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0-2a8 8 0 1 0 4.9 14.2l4.7 4.7 1.4-1.4-4.7-4.7A8 8 0 0 0 10 2z"></path>
+          </svg>
+        </button>
+      </form>
+      <button class="btn btn--kids">Kids</button>
+      <div class="profile">
+        <img src="https://i.pravatar.cc/32?img=12" alt="Profile"/>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">The Silent Horizon</h1>
+      <p class="hero__meta">Sci‑Fi • 2024 • 2h 8m</p>
+      <p class="hero__desc">When a deep‑space signal wakes an ancient force, a rookie pilot must choose between the mission and the truth.</p>
+      <div class="hero__actions">
+        <a href="#" class="btn btn--primary">
+          <!-- Play icon -->
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          Play
+        </a>
+        <a href="#" class="btn btn--secondary">
+          <!-- Info icon -->
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M11 7h2v2h-2zM11 11h2v6h-2z"/><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" fill="none" stroke="currentColor"/></svg>
+          More Info
+        </a>
+      </div>
+    </div>
+    <!-- Big background image -->
+    <img class="hero__bg" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1920&auto=format&fit=crop" alt="Featured background"/>
+  </section>
+
+  <!-- Rows -->
+  <main class="rows">
+    <!-- Each row -->
+    <section class="row">
+      <h2 class="row__title">Trending Now</h2>
+      <div class="row__scroller">
+        <!-- Cards -->
+        <a class="card" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/8YFL5QQVPy3AgrEQxNYVSgiPEbe.jpg" alt="Movie Poster"/>
+          <div class="card__overlay">
+            <h3>Edge of Night</h3>
+            <p>Action • 2023</p>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg" alt="Movie Poster"/>
+          <div class="card__overlay">
+            <h3>Starlight</h3>
+            <p>Sci‑Fi • 2024</p>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/6Uqp1xw1YB5H1ZiZsa1onbX7G3f.jpg" alt="Movie Poster"/>
+          <div class="card__overlay">
+            <h3>Broken City</h3>
+            <p>Thriller • 2022</p>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/2CAL2433ZeIihfX1Hb2139CX0pW.jpg" alt="Movie Poster"/>
+          <div class="card__overlay">
+            <h3>Red Willow</h3>
+            <p>Drama • 2024</p>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Movie Poster"/>
+          <div class="card__overlay">
+            <h3>Origin</h3>
+            <p>Adventure • 2016</p>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/kqjL17yufvn9OVLyXYpvtyrFfak.jpg" alt="Movie Poster"/>
+          <div class="card__overlay">
+            <h3>Revenant</h3>
+            <p>Drama • 2015</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="row">
+      <h2 class="row__title">Only on Netflix</h2>
+      <div class="row__scroller">
+        <a class="card card--tall" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="Poster"/>
+          <div class="card__overlay">
+            <h3>Dark Matter</h3>
+            <p>Series • 3 Seasons</p>
+          </div>
+        </a>
+        <a class="card card--tall" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg" alt="Poster"/>
+          <div class="card__overlay">
+            <h3>Night Watch</h3>
+            <p>Limited Series</p>
+          </div>
+        </a>
+        <a class="card card--tall" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg" alt="Poster"/>
+          <div class="card__overlay">
+            <h3>Inception</h3>
+            <p>Movie</p>
+          </div>
+        </a>
+        <a class="card card--tall" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg" alt="Poster"/>
+          <div class="card__overlay">
+            <h3>Endgame</h3>
+            <p>Movie</p>
+          </div>
+        </a>
+        <a class="card card--tall" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg" alt="Poster"/>
+          <div class="card__overlay">
+            <h3>Return</h3>
+            <p>Movie</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="row">
+      <h2 class="row__title">Top Picks for You</h2>
+      <div class="row__scroller">
+        <a class="card" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/8WUVHemHFH2ZIP6NWkwlHWsyrEL.jpg" alt="Poster"/>
+          <div class="card__overlay">
+            <h3>Bloodshot</h3>
+            <p>Action</p>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/q719jXXEzOoYaps6babgKnONONX.jpg" alt="Poster"/>
+          <div class="card__overlay">
+            <h3>Your Name</h3>
+            <p>Anime</p>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/plnlrtBUULT0rh3Xsjmpubiso3L.jpg" alt="Poster"/>
+          <div class="card__overlay">
+            <h3>Whiplash</h3>
+            <p>Drama</p>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/2TeJfUZMGolfDdW6DKhfIWqvq8y.jpg" alt="Poster"/>
+          <div class="card__overlay">
+            <h3>Interstellar</h3>
+            <p>Sci‑Fi</p>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <img src="https://image.tmdb.org/t/p/w342/rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg" alt="Poster"/>
+          <div class="card__overlay">
+            <h3>Godfather</h3>
+            <p>Crime</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <a href="#">Audio Description</a>
+      <a href="#">Help Centre</a>
+      <a href="#">Gift Cards</a>
+      <a href="#">Investor Relations</a>
+      <a href="#">Jobs</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy</a>
+      <a href="#">Cookie Preferences</a>
+      <a href="#">Legal Notices</a>
+      <a href="#">Corporate Information</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <p class="copyright">© 2025 Netflix Clone (HTML & CSS Demo)</p>
+  </footer>
+</body>
+</html>
